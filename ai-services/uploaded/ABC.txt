@@ -1,0 +1,6 @@
+shoes - 3000
+bag 
+thermal set - 1500
+socks - 500
+hat - 500
+pant - 1500

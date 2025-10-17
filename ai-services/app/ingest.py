@@ -22,7 +22,6 @@ def ingest_file(filepath: str):
     if not docs:
         raise ValueError("No text extracted from file")
     chunks = splitter.split_documents(docs)
-    print(chunks)
     if os.path.exists("faiss_index/index.faiss"):
         vectorstores = FAISS.load_local("faiss_index",embeddings, allow_dangerous_deserialization=True)
         vectorstores.add_documents(chunks)
@@ -31,6 +30,3 @@ def ingest_file(filepath: str):
 
     vectorstores.save_local("faiss_index")
     return len(chunks)
-
-    # store = FaissStore.get_instance()
-    # n = store.add_documents(documents)

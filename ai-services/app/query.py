@@ -19,7 +19,6 @@ Question:
 
 Answer concisely and show sources at the end.
 """
-print(os.getenv("OPENAI_API_KEY"))
 llm = ChatOpenAI(
     model="openai/gpt-3.5-turbo-0613",
     openai_api_base = os.getenv("OPENAI_API_BASE"),
